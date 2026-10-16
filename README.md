@@ -1,41 +1,89 @@
-# My AI Dev Toolkit
+# Python for AI — Module 1
 
-**Name:** Muhammad Nouman
+## Module 1 Project: AI Prompt Kit for a Clinic
 
-**Course Name:** AI for Everyone
+A beginner-friendly Python tool that collects five clinic details and generates three ready-to-use AI prompts for marketing, patient customer service, and low-cost clinic growth.
 
-**My AI Goal:** My goal is to learn AI engineering and build useful AI applications, chatbots, and voice agents.
+### Features
 
-## How to Run
+- Collects basic business information from the user.
+- Generates a healthcare marketing prompt.
+- Generates a patient customer service prompt.
+- Generates a clinic growth prompt with budget considerations.
+- Includes safety instructions for healthcare-related content.
 
-Run the following command in the terminal:
+### Requirements
 
-uv run main.py
+- Python 3.11 or compatible version
+- `uv` package manager
+- Ollama
+- Ollama model: `gemma3:1b`
 
+### Run the Project
 
-## Lessons Completed So Far
+From the repository root, run:
 
-1. Introduction to Artificial Intelligence (AI)
-2. Generative AI
-3. Large Language Models (LLMs)
-4. Difference between Chatbots, Assistants, and Agents
-5. Introduction to Python
-6. Python `print()` function
-7. Using f-strings in Python
-9. Introduction to `uv` and Python environments
-10. Introduction to Ollama and local LLMs
-11. Basic AI application architecture
-12. Introduction to Git/GitHub and VS Code
+```bash
+uv run code/project_m1_prompt_kit.py
+```
 
-# Folder Structure
+Enter the requested clinic details when prompted.
 
-python-ai/
-├── code/             # Store Python code
-├── notebooks/        # Store Jupyter notebooks
-├── docs/             # Store project documentation
-├── .gitignore        # Files Git should ignore
-├── .python-version   # Python version for the project
-├── main.py           # Main Python program
-├── pyproject.toml    # Project details and dependencies
-├── uv.lock           # Exact dependency versions
-└── README.md         # Project information and instructions
+### Example Business Details
+
+- **Name:** CarePlus Clinic
+- **Type:** Family clinic
+- **City:** Lahore
+- **Main patients:** Families
+- **Monthly budget:** 15000 PKR
+
+### Test with Ollama
+
+This project generates prompts but does not automatically send them to an AI model.
+
+1. Run the Python script.
+2. Copy each generated prompt.
+3. Test each prompt using the `gemma3:1b` model in Ollama.
+4. Save the actual prompts and responses.
+5. Review the results for usefulness, accuracy, unsupported medical claims, invented prices, and patient privacy.
+
+Save your test results in:
+
+```text
+docs/project-m1-results.md
+```
+
+**Important:** Record actual model outputs only. Do not use example responses as real test results.
+
+### Screenshot
+
+Take a screenshot of the running Python script and save it as:
+
+```text
+docs/project-m1-run.png
+```
+
+### Who Would Pay for This?
+
+Small clinic owners who need help drafting general marketing content, patient-service replies, and ideas for improving clinic operations but are unsure how to write effective AI prompts.
+
+### Limitations
+
+- The tool generates prompts; it does not automatically generate AI responses.
+- It does not connect to an AI model automatically.
+- It does not provide medical advice or diagnose patients.
+- Generated prompts and responses may require correction and review.
+
+### Healthcare Safety and Privacy
+
+A qualified clinic staff member should review all patient-facing content before publication or sending.
+
+Never enter identifiable patient information into an AI tool unless the clinic has approved an appropriate privacy-compliant process.
+
+### Project Status
+
+- [ ] Python prompt-generation script
+- [ ] Test all three prompts with Ollama
+- [ ] Review and document actual AI responses
+- [ ] Save the results in `docs/project-m1-results.md`
+- [ ] Save the running-script screenshot in `docs/project-m1-run.png`
