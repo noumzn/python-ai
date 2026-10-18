@@ -60,7 +60,7 @@ print(customer_service_prompt)
 print("\n[3] Clinic Growth")
 print("-" * 45)
 print(growth_prompt)
-
+ 
 print("\n" + "=" * 45)
 print("Your 3 clinic AI prompts are ready!")
 print("=" * 45)
