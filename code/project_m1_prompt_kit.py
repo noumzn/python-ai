@@ -1,66 +1,45 @@
-"""
-AI Prompt Kit for Clinics
-
-This tool asks a clinic owner for basic business details and creates
-three ready-to-use AI prompts for marketing, patient customer service,
-and low-cost business growth ideas. It is intended for small clinics.
-"""
-
-# Ask for five details so each prompt fits the clinic.
-business_name = input("Clinic name: ")
-business_type = input("Clinic type (e.g. family clinic): ")
+LINE = "=" * 60
+business_name = input("Business name: ")
+business_type = input("Business type (e.g. bakery): ")
 city = input("City: ")
-main_customers = input("Main patients (e.g. families): ")
-monthly_budget = int(input("Monthly AI/marketing budget (PKR): "))
+customers = input("Main customers (e.g. students, families): ")
 
-# A clear header makes the generated prompt kit easy to read.
-print("\n" + "=" * 45)
-print(f"AI Prompt Kit for {business_name}")
-print("=" * 45)
-
-# Naming the audience and tone helps make marketing content more specific.
+budget = int(input("Monthly budget in PKR: ")) #explicite conversion from string to integer
 marketing_prompt = (
-    f"You are a healthcare marketing assistant for {business_name}, "
-    f"a {business_type} in {city}. Write one short social media post "
-    f"for {main_customers}. Use a warm, clear, professional tone and "
-    "include one call to action to contact the clinic for appointment "
-    "information. Do not promise cures, make unsupported medical claims, "
-    "or disclose patient information."
+    f"post idea for {business_name}, a {business_type} in {city}. "
+    f"a short caption and 3 relevant hashtags. Keep the tone friendly."
 )
-
-# A role, situation, and privacy boundary help guide a respectful reply.
-customer_service_prompt = (
-    f"You are the patient service representative at {business_name}, "
-    f"a {business_type} in {city}. Draft a polite reply to a patient "
-    "who is unhappy because their appointment was delayed. Apologize "
-    "for the inconvenience, acknowledge their concern, and invite them "
-    "to contact the clinic privately to discuss next steps. Do not ask "
-    "for or reveal sensitive medical information. Keep it concise."
-)
-
-# A fixed number of ideas and an explicit budget make the request actionable.
+service_prompt = (
+    f"{business_name} in {city}. Write a polite, empathetic reply to an "
+    f"unhappy customer who had a bad experience. Apologise sincerely, offer to make it right, and keep "
+    f"it under 100 words."
+) 
+#formatting string
+#triple quotes are used for multi-line strings 
+#same as lesson 07 
+ 
 growth_prompt = (
-    f"Suggest 3 low-cost AI ideas for {business_name}, a {business_type} "
-    f"in {city}. The clinic mainly serves {main_customers} and has a "
-    f"monthly budget of {monthly_budget} PKR. For each idea, explain "
-    "the use case, estimated cost range, and first step. Clearly label "
-    "costs as estimates and do not invent exact prices. Protect patient "
-    "privacy, require staff review for patient-facing content, and do not "
-    "use AI to diagnose patients or replace qualified medical professionals."
+    f"You are a business growth advisor. Suggest 3 low-cost ways AI can "
+    f"help {business_name}, a {business_type} in {city} serving "
+    f"{customers}, grow its business. Our total monthly budget is "
+    f"PKR {budget:,}. For each idea, give the estimated monthly cost in "
+    f"PKR and the first step to start."
 )
 
-print("\n[1] Marketing")
-print("-" * 45)
+print(f"\n{LINE}")
+print(f"  AI PROMPTS FOR {business_name.upper()}")
+print(LINE)
+ 
+print("\nPROMPT 1 - MARKETING")
+print("-" * 60)
 print(marketing_prompt)
-
-print("\n[2] Patient Customer Service")
-print("-" * 45)
-print(customer_service_prompt)
-
-print("\n[3] Clinic Growth")
-print("-" * 45)
+ 
+print("\nPROMPT 2 - CUSTOMER SERVICE")
+print("-" * 60)
+print(service_prompt)
+ 
+print("\nPROMPT 3 - GROWTH")
+print("-" * 60)
 print(growth_prompt)
  
-print("\n" + "=" * 45)
-print("Your 3 clinic AI prompts are ready!")
-print("=" * 45)
+## LLM prompts in action
