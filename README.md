@@ -87,3 +87,31 @@ Never enter identifiable patient information into an AI tool unless the clinic h
 - [ ] Review and document actual AI responses
 - [ ] Save the results in `docs/project-m1-results.md`
 - [ ] Save the running-script screenshot in `docs/project-m1-run.png`
+
+
+
+# python-ai
+
+My Python and AI learning repo.
+
+## Module 1 Project: AI Front Desk (Sweet Crumbs Desk)
+
+A command-line front desk for a bakery that answers common questions for free with rules, gives exact price quotes with discounts and delivery fees, and prepares AI-ready prompts (private questions go to a local model) for everything else, then prints a session report for the owner.
+
+**Run it:**
+
+```
+uv run code/project_m1_front_desk.py
+```
+
+**Screenshot of a full session:**
+
+![Full session with report](docs/project-m1-part2-run.png)
+
+**Value to the owner:** the desk answers the repeat questions and calculates every quote the same correct way, so staff stop making price mistakes, and the session report shows what customers ask that the rules cannot answer. (Edit this line with your own estimate, for example minutes saved per day.)
+
+**Files:**
+
+- `code/project_m1_front_desk.py`: the script
+- `docs/project-m1-part2-design.md`: intents, business rules and rule test results
+- `docs/project-m1-part2-results.md`: two AI tests with my judgement
