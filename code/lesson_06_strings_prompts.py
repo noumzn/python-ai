@@ -1,14 +1,15 @@
 
 """Lesson 1.6: Prompt Cleaner"""
 
+# Take input from the user
 raw_name = input("Enter your name: ")
 raw_question = input("Enter your question: ")
 
-
+# Clean the name and question by removing extra spaces and formatting text
 clean_name = raw_name.strip().title()
 clean_question = " ".join(raw_question.split()).capitalize()
 
-
+# Limit question length and estimate tokens
 short_question = clean_question[:150]
 estimated_tokens = round(len(short_question) / 4)
 

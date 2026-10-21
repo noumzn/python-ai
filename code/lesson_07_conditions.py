@@ -37,4 +37,4 @@ else:
 print("=" * 40)
 print(f"Selected model: {model}")
 print(warning)
-print(f"Estimated input cost: ${cost:.6f}")
+print(f"Estimated input cost: ${cost:.2f}")
